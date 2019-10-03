@@ -1,10 +1,13 @@
+Die first;
 void setup()
 {
 	noLoop();
 }
 void draw()
 {
-	//your code here
+	background(0);
+	first.Die(100,100);
+	first.show();
 }
 void mousePressed()
 {
@@ -12,11 +15,13 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	//variable declarations here
-	
+	int myX,myY,mySize,myNum;	
 	Die(int x, int y) //constructor
 	{
 		//variable initializations here
+		myX=x;
+		myY=y;
+		mySize=15;
 	}
 	void roll()
 	{
@@ -24,6 +29,7 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		//your code here
+		fill(255);
+		rect(myX,myY,mySize,mySize);
 	}
 }
