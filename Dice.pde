@@ -21,19 +21,24 @@ class Die //models one single dice cube
 		//variable initializations here
 		myX=x;
 		myY=y;
-		mySize=25;
+		mySize=50;
+		roll();
 	}
 	void roll()
 	{
-		//your code here
+		myNum = (int)(Math.random()*2+1);
 	}
 	void show()
 	{
 		fill(255);
 		rect(myX,myY,mySize,mySize);
-		if(true){
-			fill(0);
-			ellipse((float)(myX+mySize)/2,(float)(myY+mySize)/2,(float)(mySize/10),(float)(mySize/10));
+		fill(0);
+		if(myNum==1){
+			ellipse(myX+(float)(mySize)/2,myY+(float)(mySize)/2,(float)(mySize/10),(float)(mySize/10));
+		}
+		else if(myNum==2){
+			ellipse(myX+(float)(mySize)/3,myY+(float)(mySize)/3,(float)(mySize/10),(float)(mySize/10));
+			ellipse(myX+(float)(mySize)/3*2,myY+(float)(mySize)/3*2,(float)(mySize/10),(float)(mySize/10));
 		}
 	}
 }
