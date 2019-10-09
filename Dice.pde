@@ -16,7 +16,8 @@ void draw()
 			sum+=first.myNum;
 		}
 	}
-	System.out.println(sum);
+	fill(255);
+	text("Total: "+ sum,250-10,500-20);
 }
 void mousePressed()
 {
