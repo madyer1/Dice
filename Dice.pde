@@ -27,7 +27,7 @@ void mousePressed()
 }
 class Die //models one single dice cube
 {
-	int myX,myY,mySize,myNum;	
+	int myX,myY,mySize,myNum,myR,myG,myB;	
 	Die(int x, int y)
 	{
 		//variable initializations here
@@ -35,6 +35,9 @@ class Die //models one single dice cube
 		myY=y;
 		mySize=20;
 		roll();
+		myR = (int)(Math.random()*255+1);
+		myG = (int)(Math.random()*255+1);
+		myB = (int)(Math.random()*255+1);
 	}
 	void roll()
 	{
@@ -42,7 +45,7 @@ class Die //models one single dice cube
 	}
 	void show()
 	{
-		fill(255);
+		fill(myR,myB,myG);
 		rect(myX,myY,mySize,mySize);
 		fill(0);
 		if(myNum==1){
