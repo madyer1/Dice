@@ -1,4 +1,4 @@
-Die first=new Die(100,100);
+
 void setup()
 {
 	size(500,500);
